@@ -1,0 +1,8 @@
+tags
+*.log
+lib/ib_api/
+lib/td_api/
+private_data/
+private_data/*
+notebooks/.ipynb_checkpoints/
+__pycache__/
