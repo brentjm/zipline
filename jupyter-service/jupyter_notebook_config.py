@@ -25,7 +25,7 @@
 #c.JupyterApp.answer_yes = False
 
 ## Full path of a config file.
-#c.JupyterApp.config_file = '/home/brent/.jupyter/jupyter_notebook_config.py'
+c.JupyterApp.config_file = '/home/brent/.jupyter/jupyter_notebook_config.py'
 
 ## Specify a config file to load.
 #c.JupyterApp.config_file_name = ''

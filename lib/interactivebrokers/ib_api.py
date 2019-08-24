@@ -33,7 +33,6 @@ from ibapi.order_state import OrderState
 
 API_THREAD = None
 
-
 def setup_logger():
     """Setup the logger.
     """

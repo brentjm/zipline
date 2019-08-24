@@ -16,6 +16,9 @@ services:
       - type: bind
         source: ./lib
         target: /home/brent/.jupyter/lib
+#      - type: bind
+#        source: ./private_data
+#        target: /home/brent/.jupyter/private_data
       - type: bind
-        source: ./private_data
-        target: /home/brent/.jupyter/private_data
+        source: /home/brent/Dropbox/brent/investing
+        target: /home/brent/.jupyter/data
