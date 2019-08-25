@@ -30,7 +30,6 @@ from ibapi.common import OrderId, ListOfContractDescription, BarData,\
         HistogramDataList, TickerId
 from ibapi.order import Order
 from ibapi.order_state import OrderState
-
 API_THREAD = None
 
 def setup_logger():
@@ -589,7 +588,6 @@ class IBApp(IBWrapper, IBClient):
             symbols = [symbols]
 
         # Estimate a duration string for the given date span.
-        # TODO fix duration of seconds
         duration = end_date - start_date
         if duration.days >= 365:
             duration = "{} Y".format(int(duration.days/365))
@@ -598,7 +596,7 @@ class IBApp(IBWrapper, IBClient):
             np_end_date = np.datetime64(end_date.strftime("%Y-%m-%d"))
             duration = "{} D".format(np.busday_count(np_start_date, np_end_date))
         else:
-            duration = "{} S".format(duration.seconds)
+            duration = "{} S".format(duration.days*(14*3600) + duration.seconds)
         # Get the bar data for each symbol
         bars = {}
         for symbol in symbols:
