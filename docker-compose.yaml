@@ -13,12 +13,3 @@ services:
       - type: bind
         source: ./notebooks
         target: /home/brent/.jupyter/notebooks
-      - type: bind
-        source: ./lib
-        target: /home/brent/.jupyter/lib
-      - type: bind
-        source: ./private_data
-        target: /home/brent/.jupyter/private_data
-      - type: bind
-        source: /home/brent/Dropbox/brent/investing
-        target: /home/brent/.jupyter/data
